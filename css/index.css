@@ -1,11 +1,146 @@
-nav{
+#nav{
      background-color: pink;
     object-fit: contain;
+}
+
+
+/* section */
+
+img{
+    object-fit: cover;
 }
 
 section{
     margin-top: 90px;
 }
+
+/* cards */
+
+.card {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; 
+  margin: 15px;
+  object-fit: cover;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  object-fit: cover;
+}
+.card-inner:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {   /* note the syntax where the comma is*/
+  width: 100%;
+  height: 100%;
+  position: absolute; /* This keeps the card back and front in one place when being hovered over so that it looks like an actual card*/
+  backface-visibility: hidden; /* Prevents flickering during the flip */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  object-fit: cover;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  object-fit: cover;
+}
+
+.card-front img {
+  max-width: 100%; /* Ensure the image fits within its container */
+  max-height: 100%; /* Ensure the image fits within its container */
+  border-radius: 10px; /* Match the card's border-radius */
+}
+.card-back img {
+  max-width: 100%; /* Ensure the image fits within its container */
+  max-height: 80%; /* Ensure the image fits within its container */
+  border-radius: 10px; /* Match the card's border-radius */
+  margin-top: 19px;
+}
+
+
+
+#card-div{
+    width: 900px;
+    height: 300px;
+    border: 2px solid black;
+    margin: 12px;
+    overflow-y: scroll;
+    scrollbar-color: black;
+}
+
+
+/* card 2 */
+
+/* Basic styles */
+  .card-two {
+    width: 300px;
+    height: 400px; /* Adjust height to fit the image properly */
+    perspective: 1000px; /* Adds perspective for 3D effect */
+  }
+  
+  .card-inner-two {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .card-two:hover .card-inner-two {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front-two, .card-back-two {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Prevents flickering during the flip */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  .hover-image {
+    max-width: 100%; /* Ensure the image fits within its container */
+    max-height: 100%; /* Ensure the image fits within its container */
+    border-radius: 10px; /* Match the card's border-radius */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .card-front-two:hover .hover-image {
+    transform: scale(1.1); /* Optional: Zoom effect on hover */
+  }
+  
+  .card-front-two:hover .hover-image {
+    content: url('https://chany4.github.io/ecomWEB/images/heels/red.heels1.worn.png');
+  }
+  
+  .card-back-two {
+    transform: rotateY(180deg); /* Initially hidden, rotated 180 degrees */
+  }
+  
+
+
+
+
+
+/* footer */
+
 #footer-nav{
     width: 900px;
     height: 400px;

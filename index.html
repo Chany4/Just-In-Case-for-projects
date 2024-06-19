@@ -19,25 +19,25 @@
               <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav ">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html">Basics</a>
+                    <a class="nav-link active" aria-current="page" href="../index.html">Cards</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="html/carousel.html">Carousels</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="products.html">Products</a>
+                    <a class="nav-link" href="html/animations-and-keyframes.html">Animation and Keyframes</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Carousel</a>
+                    <a class="nav-link" href="html/extras.html">Extras</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="cart.html">Search Bars and filters</a>
+                    <a class="nav-link" href="html/search-bar-and-filter.html">Search Bars and filters</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="admin.html">Pop-ups</a>
+                    <a class="nav-link" href="html/pop-ups.html">Pop-ups</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="admin.html">External Resources</a>
+                    <a class="nav-link" href="html/external-resources.html">External Resources</a>
                   </li>
                 </ul>
               </div>
@@ -46,10 +46,157 @@
     </main>
     <section>
         <h1 class="section">Welcome To Chandrè 's survival guide for projects</h1>
+        <br><br>
         <h5>Note that the code for the navigation bar will be at the foooter of all of the pages</h5>
+        <br>
         <h6>Let's Begin</h6>
 
-        <h4></h4>
+        <h4>Cards</h4>
+        
+
+        <div class="row">
+          <div class="col col-md-4">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="https://chany4.github.io/ecomWEB/images/heels/black.heels1.worn.png" alt="">
+                </div>
+                <div class="card-back">
+                  <label for="card-label">
+                    <img src="https://chany4.github.io/ecomWEB/images/heels/black.heels1.front-removebg-preview.png" alt="">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-8">
+            <div class="container-fluid" id="card-div">
+              <div class="card-html">
+                  <h5>HTML</h5>
+                   <p>
+                      &#60;nav id="nav" class="navbar navbar-expand-lg fixed-top"&#62;
+                      <br><br>
+                      
+                          &#60;div class="container-fluid"&#62;
+                            &#60;a class="navbar-brand text-white fw-bold fs-3" href="../index.html"&#62;VERA&#60;/a&#62;
+                            <br><br>
+                            &#60;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"&#62;
+                              &#60;span class="navbar-toggler-icon"&#62;&#60;/span&#62;
+                            &#60;/button&#62;
+                            <br><br>
+                            &#60;div class="collapse navbar-collapse justify-content-end" id="navbarNav"&#62;
+                            <br><br>
+                              &#60;ul class="navbar-nav "&#62;
+                                &#60;li class="nav-item"&#62;
+                                  &#60;a class="nav-link active" aria-current="page" href="../index.html"&#62;Home&#60;/a&#62;
+                                &#60;/li&#62;
+                                &#60;li class="nav-item"&#62;
+                                  &#60;a class="nav-link" href="about.html"&#62;About&#60;/a&#62;
+                                &#60;/li&#62;
+                                &#60;li class="nav-item"&#62;
+                                  &#60;a class="nav-link" href="products.html"&#62;Products&#60;/a&#62;
+                                &#60;/li&#62;
+                                &#60;li class="nav-item"&#62;
+                                  &#60;a class="nav-link" href="contact.html"&#62;Contact&#60;/a&#62;
+                                &#60;/li&#62;
+                                &#60;li class="nav-item"&#62;
+                                  &#60;a class="nav-link" href="cart.html"&#62;Cart&#60;/a&#62;
+                                &#60;/li&#62;
+                                &#60;li class="nav-item"&#62;
+                                  &#60;a class="nav-link" href="admin.html"&#62;Admin&#60;/a&#62;
+                                &#60;/li&#62;
+                              &#60;/ul&#62;
+                              <br><br>
+                            &#60;/div&#62;
+                            <br><br>
+                          &#60;/div&#62;
+                          <br><br>
+                        &#60;/nav&#62;
+                  
+                  </p>
+              </div>
+              <div class="card-css">
+                  <h5>CSS</h5>
+                  <br>
+                  <p>
+                    .card { <br>
+              width: 300px; <br>
+              height: 200px; <br>
+              perspective: 1000px; <br>
+              margin: 15px; <br>
+              object-fit: cover; <br>
+            } <br> <br>
+            
+            .card-inner { <br>
+              width: 100%; <br>
+              height: 100%; <br>
+              transform-style: preserve-3d; <br>
+              transition: transform 0.6s; <br>
+              object-fit: cover; <br>
+            } <br> <br>
+            .card-inner:hover { <br>
+                transform: rotateY(180deg); <br>
+            } <br> <br>
+            
+            .card-front, .card-back {   /* note the syntax where the comma is*/ <br>
+              width: 100%; <br>
+              height: 100%; <br>
+              position: absolute; /* This keeps the card back and front in one place when being hovered over so that it looks like an actual card*/ <br>
+              backface-visibility: hidden; /* Prevents flickering during the flip */ <br>
+              display: flex; <br>
+              flex-direction: column; <br>
+              justify-content: center; <br>
+              align-items: center; <br>
+              box-shadow: 0 4px 8px rgba(0,0,0,0.1); <br>
+              border-radius: 10px; <br>
+              background-color: #fff; <br>
+              padding: 20px; <br>
+              object-fit: cover; <br>
+            } <br>
+            <br> <br>
+            .card-back { <br>
+              transform: rotateY(180deg); <br>
+              object-fit: cover; <br>
+            } <br> <br>
+            
+            .card-front img { <br>
+              max-width: 100%; /* Ensure the image fits within its container */ <br>
+              max-height: 100%; /* Ensure the image fits within its container */ <br>
+              border-radius: 10px; /* Match the card's border-radius */ <br>
+            } <br> <br>
+            .card-back img { <br>
+              max-width: 100%; /* Ensure the image fits within its container */ <br>
+              max-height: 80%; /* Ensure the image fits within its container */ <br>
+              border-radius: 10px; /* Match the card's border-radius */ <br>
+              margin-top: 19px; <br>
+            } <br>
+                  </p>
+                     
+                      <br><br>
+                 
+              </div>
+              <div class="cards-script">
+                  <h5>SCRIPT</h5>
+                  <p>
+                      None
+                  </p>
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ask Tyra for her image change  on hover and image upscale on hover from yonela -->
+
+        <div data-test-id="collection---product-card">
+
+        </div>
+ 
+
+
+
+
+
         
     </section>
 
@@ -126,10 +273,9 @@
                 </p>
                 
             </div>
-            <div class="nav-bootsrap-links">
-
-            </div>
         </div>
+
+
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
